@@ -1,0 +1,20 @@
+
+<h1>
+  Cadastro de Pessoas
+</h1>
+
+<form >
+  <div class="form-group">
+  <label for="nome">Nome:</label>
+  <input type="text" class="form-control" name="nome" [(ngModel)]="cliente.Nome">
+  <label for="CPF">CPF:</label>
+  <input type="text" class="form-control"name="CPF" id="" [(ngModel)]="cliente.CPF">
+  
+  <div *ngIf="!cliente.Valido()">
+    CPF INVALIDO!
+  </div>
+  <div > 
+    <input type="button" class='btn btn-primary' value="OkOk" (click)="salvar()">
+  </div>
+</div>
+</form>
